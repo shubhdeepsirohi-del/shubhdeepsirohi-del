@@ -17,7 +17,7 @@ I design practical systems that help businesses respond to enquiries, collect cu
 
 ## Current flagship build
 
-### End-to-end appointment automation system
+### [End-to-end appointment automation system](./case-studies/appointment-automation.md)
 
 I am currently developing and refining a system for appointment-based service businesses, with an initial focus on dental and healthcare-adjacent workflows.
 
@@ -32,6 +32,8 @@ The workflow is designed to:
 7. Connect payment and confirmation steps where required
 
 **Current status:** active development and testing. I am focused on reliability, clearer conversations, and reducing the points where real-world workflows can break.
+
+**[Read the complete technical and business case study →](./case-studies/appointment-automation.md)**
 
 ## Automation stack
 
