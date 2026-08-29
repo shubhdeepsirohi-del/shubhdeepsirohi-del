@@ -1,117 +1,108 @@
-# Appointment Automation System
+# End-to-End Appointment Automation
 
-> A conversational workflow for turning service-business enquiries into organised appointments.
-
-## Project status
-
-This system is in active development and testing. It is presented as a technical case study, not as a claim of completed client results.
+> A connected customer journey that turns enquiries into organised appointments.
 
 ## The operational problem
 
-Appointment-based businesses often manage one customer journey across several disconnected tools:
+Appointment-based businesses often manage a single customer journey across disconnected systems:
 
-- customer questions arrive through chat;
-- staff manually collect contact and booking information;
+- enquiries arrive through different channels;
+- staff repeatedly collect the same information;
 - availability is checked separately;
-- details are copied into calendars or tables;
-- changes and cancellations require more manual coordination;
-- payment and confirmation steps can become disconnected from the booking.
+- booking details are manually transferred into operational records;
+- updates and cancellations require further coordination;
+- confirmations and payments can become disconnected from the appointment.
 
-The result can be slower responses, duplicated work, inconsistent records, and fragile handoffs.
+This creates slower responses, duplicated work, inconsistent records, and fragile handoffs.
 
-## Proposed workflow
+## Solution architecture
 
 ```mermaid
 flowchart TD
-    A[Customer enquiry] --> B[Botpress conversation]
-    B --> C{Request type}
-    C -->|FAQ| D[Business knowledge response]
-    C -->|New booking| E[Collect required details]
-    C -->|Update or cancel| F[Identify existing appointment]
-    E --> G[Check Google Calendar availability]
-    G --> H[Customer selects a slot]
-    H --> I[Create calendar event]
-    I --> J[Store record in Airtable]
-    J --> K[Confirmation or payment step]
-    F --> L[Update calendar and Airtable]
+    A[Customer enquiry] --> B[Conversational interface]
+    B --> C{Customer intent}
+    C -->|Question| D[Knowledge response]
+    C -->|New appointment| E[Information capture]
+    C -->|Change or cancel| F[Existing appointment]
+    E --> G[Availability service]
+    G --> H[Slot selection]
+    H --> I[Scheduling system]
+    I --> J[CRM and records]
+    J --> K[Confirmation or payment]
+    F --> L[Synchronised update]
 ```
 
-## System responsibilities
+## Core capabilities
 
-### Conversation layer — Botpress
+### Conversational layer
 
-- determines what the customer is trying to do;
+- identifies the customer's intent;
 - collects structured information;
 - answers approved business questions;
-- moves the customer through booking, update, or cancellation paths;
-- presents clear recovery options when required data is missing.
+- guides booking, update, and cancellation journeys;
+- provides recovery or escalation when automation cannot proceed.
 
-### Integration layer — Make
+### Workflow orchestration
 
-- receives structured workflow data;
-- coordinates actions across external services;
-- maps fields between the conversation, database, calendar, and payment steps;
-- handles webhook-based responses.
+- coordinates actions across connected business systems;
+- maps information between conversations, schedules, records, and payments;
+- manages event-based responses and multi-step processes;
+- keeps the customer journey moving across system boundaries.
 
-### Scheduling layer — Google Calendar
+### Scheduling integration
 
-- provides availability inputs;
-- creates appointment events;
-- updates or removes events when the booking changes;
-- requires RFC 3339-compatible timestamps and deliberate timezone handling.
+- checks available appointment capacity;
+- creates appointments;
+- updates or removes bookings when plans change;
+- manages date, time, and timezone consistency.
 
-### Data layer — Airtable
+### CRM and operational records
 
 - stores customer and appointment information;
-- provides an operational record outside the conversation;
-- keeps booking status and identifiers available for later updates.
+- maintains booking status and identifiers;
+- keeps operational data available for follow-up and reporting;
+- synchronises changes across the workflow.
 
-### Customer channel — WhatsApp or web chat
+### Customer communication
 
-- gives customers a familiar place to ask questions and manage appointments;
-- requires channel-specific testing because published-channel behaviour can differ from an emulator.
+- supports familiar digital communication channels;
+- delivers confirmations and next steps;
+- allows customers to manage appointments without unnecessary staff intervention;
+- preserves a route to a human when required.
 
 ## Reliability considerations
 
-The difficult part is not connecting one successful demo path. A usable implementation must also account for:
+A useful implementation must handle more than one successful demonstration. It should account for:
 
 - incorrect or incomplete customer information;
 - timezone and date-format mismatches;
-- a slot becoming unavailable during the conversation;
-- duplicate submissions and webhook retries;
-- a calendar action succeeding while the database action fails;
+- availability changing during a conversation;
+- duplicate submissions and repeated events;
+- one connected system succeeding while another fails;
 - delayed payment confirmation;
-- customers returning in a new conversation;
-- safe escalation to a human when automation cannot complete the request.
+- customers returning through a new conversation;
+- safe escalation when automation cannot complete the request.
 
-## Data and privacy approach
+## Data and privacy
 
-A real deployment should collect only information required for the workflow, restrict access to connected systems, avoid exposing secrets in source control, and define retention and deletion rules. Healthcare deployments require a separate compliance review of every vendor, data field, agreement, and operational process; this prototype is not presented as automatically HIPAA compliant.
+A production deployment should collect only the information required for the workflow, restrict access to connected systems, protect credentials, and define data-retention and deletion rules. Regulated industries require a separate compliance review covering every vendor, data field, agreement, and operational process.
 
-## Current development focus
+## Implementation process
 
-- making conversations sound less robotic;
-- strengthening state and error handling;
-- synchronising calendar and Airtable records;
-- validating webhook continuation behaviour;
-- improving published WhatsApp workflow testing;
-- separating payment confirmation from appointment creation where appropriate.
+1. Map the existing enquiry and appointment process.
+2. Identify repetitive tasks, delays, and failure points.
+3. Define the smallest automation that creates meaningful value.
+4. Design the customer journey and system architecture.
+5. Connect the required communication, scheduling, CRM, and payment systems.
+6. Test normal paths, exceptions, and partial failures.
+7. Pilot with controlled traffic.
+8. Measure completion, staff intervention, and operational impact.
+9. Refine before expanding the scope.
 
-## Business implementation process
+## Technology approach
 
-1. Map the business's existing enquiry and booking process.
-2. Identify repetitive tasks and failure points.
-3. Define the smallest valuable automation.
-4. Build and connect the workflow.
-5. Test normal paths, edge cases, and partial failures.
-6. Pilot with controlled traffic.
-7. Measure completion rate, staff time saved, and handoff frequency.
-8. Refine before expanding scope.
-
-## Built with
-
-Botpress · Make · Airtable · Google Calendar · WhatsApp · Webhooks
+The architecture is platform-independent. Tools are selected around the client's existing systems, security requirements, workflow complexity, budget, and ability to maintain the solution—not around loyalty to one software stack.
 
 ## Work with me
 
-I am open to pilot projects with appointment-based service businesses. The first conversation is about understanding the current workflow and deciding whether automation would create enough value to justify implementation.
+I work with appointment-based service businesses that want to reduce repetitive administration and create a more responsive customer journey. The first step is understanding the current operation and identifying where automation would produce real value.
