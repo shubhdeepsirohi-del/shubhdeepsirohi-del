@@ -1,68 +1,57 @@
 # Shubhdeep Sirohi
 
-### I build AI-powered appointment and workflow automation for service businesses.
+### I build AI-powered customer communication and workflow automation for service businesses.
 
-I design practical systems that help businesses respond to enquiries, collect customer details, coordinate availability, manage bookings, and keep operational data organised—without forcing staff to repeat the same administrative work all day.
+I design practical systems that help businesses respond to enquiries, capture customer information, coordinate availability, manage appointments, and keep operational records synchronised—without forcing teams to repeat the same administrative work all day.
 
 ---
 
 ## What I build
 
-- **Conversational booking workflows** for websites and WhatsApp
-- **Appointment scheduling systems** connected to Google Calendar
-- **Customer and booking databases** built with Airtable
-- **Update and cancellation workflows** that keep records synchronised
-- **FAQ and enquiry automation** for repetitive customer questions
-- **Payment-link and webhook flows** for multi-step booking journeys
+- **Conversational customer journeys** across digital channels
+- **Appointment and availability automation**
+- **CRM and operational data integration**
+- **Booking update and cancellation workflows**
+- **Knowledge-based enquiry handling**
+- **Payment, confirmation, and follow-up flows**
 
-## Current flagship build
+## Featured solution
 
-### [End-to-end appointment automation system](./case-studies/appointment-automation.md)
+### [End-to-end appointment automation](./case-studies/appointment-automation.md)
 
-I am currently developing and refining a system for appointment-based service businesses, with an initial focus on dental and healthcare-adjacent workflows.
-
-The workflow is designed to:
+A connected workflow that can:
 
 1. Understand the customer's request
 2. Answer relevant business questions
-3. Capture the required customer information
-4. Check available appointment slots
-5. Create, update, or cancel a booking
-6. Store the interaction and booking data
-7. Connect payment and confirmation steps where required
+3. Capture the required information
+4. Check availability
+5. Create, update, or cancel an appointment
+6. Synchronise operational records
+7. Coordinate confirmations and payment steps
 
-**Current status:** active development and testing. I am focused on reliability, clearer conversations, and reducing the points where real-world workflows can break.
+The focus is not merely producing a chatbot demo. It is designing a reliable customer journey that fits the business behind it.
 
-**[Read the complete technical and business case study →](./case-studies/appointment-automation.md)**
+**[Explore the solution and its architecture →](./case-studies/appointment-automation.md)**
 
-## Automation stack
+## Capabilities
 
-![Botpress](https://img.shields.io/badge/Botpress-Conversational_AI-111827?style=flat-square)
-![Make](https://img.shields.io/badge/Make-Workflow_Automation-6D00CC?style=flat-square)
-![Airtable](https://img.shields.io/badge/Airtable-CRM_%26_Data-18BFFF?style=flat-square)
-![Google Calendar](https://img.shields.io/badge/Google_Calendar-Scheduling-4285F4?style=flat-square)
-![WhatsApp](https://img.shields.io/badge/WhatsApp-Customer_Communication-25D366?style=flat-square)
-![C](https://img.shields.io/badge/C-Programming_Foundations-A8B9CC?style=flat-square)
+**Conversational AI · Workflow orchestration · Scheduling integration · CRM synchronisation · Customer messaging · Payment workflows · Webhooks and APIs**
 
 ## How I approach automation
 
-A useful automation should do more than produce an impressive demo. It should fit the existing business process, handle predictable exceptions, keep data consistent, and make work easier for both the customer and the team operating it.
+A useful automation should fit the existing operation, handle predictable exceptions, keep data consistent, and make work easier for both the customer and the team operating it.
 
-My process is:
+**Understand the workflow → identify repetitive work → design the system → connect the operation → test failure points → refine the experience**
 
-**Understand the workflow → identify repetitive work → design the system → connect the tools → test failure points → refine the experience**
+## Who I work with
 
-## Who I want to work with
-
-I am interested in working with appointment-based businesses that:
+Appointment-based businesses that:
 
 - spend too much time answering the same questions;
-- manually transfer information between chat, calendars, and spreadsheets;
+- manually move information between conversations, schedules, and records;
 - lose enquiries because responses or follow-ups are delayed; or
-- want to test automation without rebuilding their entire operation.
+- want to automate part of their operation without rebuilding everything.
 
 ## Let's talk
 
-If you run a service business and want to explore which parts of your enquiry or appointment workflow can be automated, connect with me on LinkedIn or open a discussion through one of my repositories.
-
-I am currently open to pilot projects and implementation conversations.
+If you run a service business and want to explore which parts of your customer or appointment workflow can be automated, connect with me on LinkedIn or start a conversation through one of my repositories.
