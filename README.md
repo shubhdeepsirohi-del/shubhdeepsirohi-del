@@ -1,6 +1,6 @@
 # Shubhdeep Sirohi
 
-### I build AI-powered customer communication and workflow automation for service businesses.
+### I build AI-powered customer communication and workflow automation for service businesses.\n\n**Portfolio:** [shubhdeepsirohi-del.github.io](https://shubhdeepsirohi-del.github.io)
 
 I design practical systems that help businesses respond to enquiries, capture customer information, coordinate availability, manage appointments, and keep operational records synchronised—without forcing teams to repeat the same administrative work all day.
 
