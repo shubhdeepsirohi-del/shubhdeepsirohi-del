@@ -54,4 +54,4 @@ Appointment-based businesses that:
 
 ## Let's talk
 
-If you run a service business and want to explore which parts of your customer or appointment workflow can be automated, connect with me on LinkedIn or start a conversation through one of my repositories.
+If you run a service business and want to explore which parts of your customer or appointment workflow can be automated, [connect with me on LinkedIn](https://www.linkedin.com/in/shubhdeep-sirohi-b2a466288/) or start a conversation through one of my repositories.
